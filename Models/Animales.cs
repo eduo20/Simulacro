@@ -7,5 +7,5 @@
         public string edad { get; set; } = string.Empty;
         public string altura {  get; set; } = string.Empty;
     }
-    }
+    
 }
