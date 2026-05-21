@@ -1,18 +1,18 @@
 ﻿namespace Simulacro.Models
 {
-    public class Ave
+    // Colocamos el enum afuera para libre acceso
+    public enum TipoPico
     {
-        public enum TipoPico
-        {
-            Curvo,
-            Recto,
-            Aguja
-        }
-        public class ProductoViewModel
-        {
-            // Esta propiedad guardará la opción seleccionada
-            public TipoPico TipoPicoSeleccionado { get; set; }
-        }
+        Curvo,
+        Recto,
+        Aguja
+    }
+
+    public class Ave : Animales
+    {
+        // Esta propiedad guardará la opción elegida del select
+        public TipoPico TipoPicoSeleccionado { get; set; } = TipoPico.Recto;
+
         public bool puedeVolar { get; set; }
     }
 }
